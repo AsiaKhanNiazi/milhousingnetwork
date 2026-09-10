@@ -1,702 +1,1025 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Military BAH: A Complete Guide to Basic Allowance for Housing</title>
-
-    <meta name="description"
-          content="Learn how Military BAH works, how housing allowances are determined, who qualifies, and how service members can make smarter housing decisions.">
-
-    <meta name="keywords"
-          content="Military BAH, military housing allowance, Basic Allowance for Housing, BAH military, military housing">
-
-    <style>
-
-        :root {
-            --navy: #07152f;
-            --navy-2: #0c2347;
-            --blue: #173f72;
-            --gold: #d9b66f;
-            --gold-light: #f0d99b;
-            --white: #ffffff;
-            --cream: #f7f5ef;
-            --text: #172033;
-            --muted: #687386;
-            --border: rgba(7, 21, 47, 0.10);
-            --shadow: 0 20px 60px rgba(7, 21, 47, 0.12);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f8f9fb;
-            color: var(--text);
-            line-height: 1.75;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            position: relative;
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(7,21,47,0.97) 0%,
-                    rgba(7,21,47,0.86) 42%,
-                    rgba(7,21,47,0.35) 75%,
-                    rgba(7,21,47,0.15) 100%
-                ),
-                url("https://www.corvias.com/sites/default/files/2023-05/Meade%20Meuse%20Forest%20SNCO%20ADA%204%20bed_0.jpg")
-                center/cover no-repeat;
-        }
-
-        .hero-content {
-            width: min(1180px, 92%);
-            margin: auto;
-            color: white;
-            padding: 100px 0;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 15px;
-            border: 1px solid rgba(240,217,155,0.45);
-            border-radius: 100px;
-            color: var(--gold-light);
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-            background: rgba(255,255,255,0.06);
-            backdrop-filter: blur(8px);
-        }
-
-        .eyebrow span {
-            width: 7px;
-            height: 7px;
-            background: var(--gold);
-            border-radius: 50%;
-        }
-
-        .hero h1 {
-            max-width: 850px;
-            font-size: clamp(42px, 6vw, 76px);
-            line-height: 1.04;
-            letter-spacing: -2px;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 em {
-            color: var(--gold-light);
-            font-style: normal;
-        }
-
-        .hero-description {
-            max-width: 720px;
-            font-size: 19px;
-            color: rgba(255,255,255,0.82);
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: .25s ease;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: var(--navy);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background: var(--gold-light);
-        }
-
-        .btn-outline {
-            border: 1px solid rgba(255,255,255,.35);
-            color: white;
-            background: rgba(255,255,255,.06);
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: var(--navy);
-        }
-
-        /* =========================
-           INTRO STATS
-        ========================= */
-
-        .stats-wrap {
-            position: relative;
-            margin-top: -60px;
-            z-index: 5;
-        }
-
-        .stats {
-            width: min(1100px, 92%);
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            background: white;
-            border-radius: 18px;
-            box-shadow: var(--shadow);
-            overflow: hidden;
-        }
-
-        .stat {
-            padding: 28px;
-            text-align: center;
-            border-right: 1px solid var(--border);
-        }
-
-        .stat:last-child {
-            border-right: 0;
-        }
-
-        .stat strong {
-            display: block;
-            color: var(--navy);
-            font-size: 20px;
-            margin-bottom: 4px;
-        }
-
-        .stat span {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* =========================
-           MAIN LAYOUT
-        ========================= */
-
-        .page {
-            width: min(1180px, 92%);
-            margin: 80px auto;
-            display: grid;
-            grid-template-columns: 270px 1fr;
-            gap: 55px;
-            align-items: start;
-        }
-
-        .sidebar {
-            position: sticky;
-            top: 25px;
-        }
-
-        .toc {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 10px 40px rgba(7,21,47,.07);
-            border: 1px solid var(--border);
-        }
-
-        .toc-title {
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--navy);
-            margin-bottom: 18px;
-        }
-
-        .toc a {
-            display: block;
-            text-decoration: none;
-            font-size: 14px;
-            color: var(--muted);
-            padding: 7px 0;
-            transition: .2s;
-        }
-
-        .toc a:hover {
-            color: var(--navy);
-            padding-left: 5px;
-        }
-
-        /* =========================
-           ARTICLE
-        ========================= */
-
-        article {
-            background: white;
-            border-radius: 22px;
-            padding: clamp(25px, 5vw, 60px);
-            box-shadow: 0 15px 55px rgba(7,21,47,.07);
-        }
-
-        .article-intro {
-            font-size: 20px;
-            color: #465268;
-            border-left: 4px solid var(--gold);
-            padding-left: 22px;
-            margin-bottom: 45px;
-        }
-
-        article h2 {
-            font-size: clamp(28px, 4vw, 38px);
-            line-height: 1.2;
-            color: var(--navy);
-            margin: 55px 0 18px;
-            letter-spacing: -.7px;
-        }
-
-        article h3 {
-            font-size: 21px;
-            color: var(--navy);
-            margin: 30px 0 10px;
-        }
-
-        article p {
-            color: #4e596b;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        article ul {
-            margin: 20px 0 30px 20px;
-        }
-
-        article li {
-            margin: 9px 0;
-            color: #4e596b;
-        }
-
-        article li::marker {
-            color: var(--gold);
-        }
-
-        .keyword {
-            color: var(--navy);
-            font-weight: 800;
-        }
-
-        /* =========================
-           IMAGE
-        ========================= */
-
-        .article-image {
-            margin: 35px 0;
-            border-radius: 18px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 15px 40px rgba(7,21,47,.14);
-        }
-
-        .article-image img {
-            width: 100%;
-            height: 410px;
-            object-fit: cover;
-            transition: transform .5s ease;
-        }
-
-        .article-image:hover img {
-            transform: scale(1.025);
-        }
-
-        .image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 16px 20px;
-            color: white;
-            font-size: 13px;
-            background: linear-gradient(transparent, rgba(0,0,0,.75));
-        }
-
-        /* =========================
-           FEATURE BOX
-        ========================= */
-
-        .feature-box {
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--navy),
-                    var(--navy-2)
-                );
-            color: white;
-            border-radius: 18px;
-            padding: 35px;
-            margin: 35px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-box::after {
-            content: "";
-            position: absolute;
-            width: 220px;
-            height: 220px;
-            border: 1px solid rgba(240,217,155,.25);
-            border-radius: 50%;
-            right: -70px;
-            top: -80px;
-        }
-
-        .feature-box h3 {
-            color: var(--gold-light);
-            margin-top: 0;
-        }
-
-        .feature-box p {
-            color: rgba(255,255,255,.78);
-            position: relative;
-            z-index: 2;
-        }
-
-        .feature-box a {
-            color: var(--gold-light);
-            font-weight: 800;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-
-        /* =========================
-           INFO CARDS
-        ========================= */
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin: 30px 0;
-        }
-
-        .info-card {
-            padding: 25px;
-            border-radius: 15px;
-            background: #f6f8fb;
-            border: 1px solid var(--border);
-        }
-
-        .info-card .number {
-            display: inline-flex;
-            width: 38px;
-            height: 38px;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: var(--navy);
-            color: var(--gold-light);
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .info-card h3 {
-            margin: 0 0 8px;
-            font-size: 18px;
-        }
-
-        .info-card p {
-            font-size: 14px;
-            margin: 0;
-        }
-
-        /* =========================
-           CHECKLIST
-        ========================= */
-
-        .checklist {
-            margin: 30px 0;
-            display: grid;
-            gap: 12px;
-        }
-
-        .check {
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            padding: 18px;
-            border-radius: 12px;
-            background: #f8f9fb;
-        }
-
-        .check-icon {
-            flex: 0 0 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: var(--gold);
-            color: var(--navy);
-            font-weight: 900;
-        }
-
-        .check strong {
-            color: var(--navy);
-        }
-
-        /* =========================
-           IMAGE GRID
-        ========================= */
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 18px;
-            margin: 35px 0;
-        }
-
-        .image-grid img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 16px;
-        }
-
-        /* =========================
-           FAQ
-        ========================= */
-
-        .faq {
-            margin-top: 40px;
-        }
-
-        details {
-            border-bottom: 1px solid var(--border);
-            padding: 18px 0;
-        }
-
-        summary {
-            cursor: pointer;
-            font-weight: 800;
-            color: var(--navy);
-            list-style: none;
-            position: relative;
-            padding-right: 30px;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: "+";
-            position: absolute;
-            right: 0;
-            color: var(--gold);
-            font-size: 22px;
-        }
-
-        details[open] summary::after {
-            content: "−";
-        }
-
-        details p {
-            padding-top: 12px;
-            margin-bottom: 0;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            width: min(1100px, 92%);
-            margin: 80px auto;
-            border-radius: 25px;
-            padding: 65px 50px;
-            text-align: center;
-            color: white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(7,21,47,.98),
-                    rgba(20,55,99,.95)
-                );
-
-            box-shadow: var(--shadow);
-        }
-
-        .cta h2 {
-            color: white;
-            margin: 0 0 15px;
-            font-size: clamp(30px, 4vw, 45px);
-        }
-
-        .cta p {
-            max-width: 650px;
-            margin: 0 auto 28px;
-            color: rgba(255,255,255,.75);
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #050f22;
-            color: rgba(255,255,255,.65);
-            padding: 35px 20px;
-            text-align: center;
-            font-size: 13px;
-        }
-
-        footer strong {
-            color: var(--gold-light);
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .page {
-                grid-template-columns: 1fr;
-                margin-top: 55px;
-            }
-
-            .sidebar {
-                position: relative;
-                top: auto;
-            }
-
-            .toc {
-                display: none;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .image-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 650px) {
-
-            .hero {
-                min-height: 600px;
-            }
-
-            .hero-content {
-                padding: 70px 0;
-            }
-
-            .hero h1 {
-                letter-spacing: -1px;
-            }
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .stat {
-                border-right: 0;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .stat:last-child {
-                border-bottom: 0;
-            }
-
-            article {
-                border-radius: 15px;
-                padding: 25px 20px;
-            }
-
-            .article-image img {
-                height: 260px;
-            }
-
-            .cta {
-                padding: 45px 25px;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Military BAH: A Complete Guide to Basic Allowance for Housing</title>
+
+<meta name="description" content="Learn how Military BAH works, how housing allowances are determined, who qualifies, and how service members can make smarter housing decisions.">
+
+<meta name="keywords" content="Military BAH, military housing allowance, Basic Allowance for Housing, BAH military, military housing">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+:root {
+    --navy: #06142d;
+    --navy-light: #0d2448;
+    --blue: #163f73;
+    --gold: #d8b568;
+    --gold-light: #f1d994;
+    --cream: #f7f4ec;
+    --white: #ffffff;
+    --text: #1b2638;
+    --muted: #697587;
+    --border: rgba(6,20,45,0.10);
+    --shadow: 0 25px 70px rgba(6,20,45,0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+    background: #f6f8fb;
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6,20,45,0.98) 0%,
+            rgba(6,20,45,0.92) 35%,
+            rgba(6,20,45,0.63) 62%,
+            rgba(6,20,45,0.20) 100%
+        ),
+        url("https://www.corvias.com/sites/default/files/2021-03/FortBragg.jpg")
+        center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(216,181,104,0.18),
+            transparent 30%
+        );
+}
+
+.hero-content {
+    width: min(1180px, 92%);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 17px;
+
+    border: 1px solid rgba(241,217,148,0.45);
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+
+    color: var(--gold-light);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 28px;
+}
+
+.hero-tag span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.hero h1 {
+    max-width: 880px;
+
+    font-size: clamp(45px, 7vw, 82px);
+
+    line-height: 1.02;
+    letter-spacing: -3px;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero-text {
+    max-width: 720px;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 19px;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition: .25s ease;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    color: white;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.06);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats-wrapper {
+    position: relative;
+    margin-top: -65px;
+    z-index: 5;
+}
+
+.stats {
+    width: min(1080px, 92%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.stat {
+    padding: 30px;
+
+    text-align: center;
+
+    border-right: 1px solid var(--border);
+}
+
+.stat:last-child {
+    border-right: 0;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 21px;
+
+    color: var(--navy);
+
+    margin-bottom: 5px;
+}
+
+.stat span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.container {
+    width: min(1180px, 92%);
+
+    margin: 85px auto;
+
+    display: grid;
+
+    grid-template-columns: 255px 1fr;
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: sticky;
+    top: 25px;
+}
+
+.toc {
+    background: white;
+
+    border-radius: 17px;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 12px 40px rgba(6,20,45,0.07);
+}
+
+.toc-title {
+    color: var(--navy);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 17px;
+}
+
+.toc a {
+    display: block;
+
+    text-decoration: none;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    padding: 7px 0;
+
+    transition: .2s;
+}
+
+.toc a:hover {
+    color: var(--navy);
+
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+.article {
+    background: white;
+
+    border-radius: 23px;
+
+    padding: clamp(25px, 5vw, 60px);
+
+    box-shadow:
+        0 15px 55px rgba(6,20,45,0.07);
+}
+
+.article-intro {
+    font-size: 20px;
+
+    color: #48556a;
+
+    border-left: 4px solid var(--gold);
+
+    padding-left: 22px;
+
+    margin-bottom: 45px;
+}
+
+.article h2 {
+    color: var(--navy);
+
+    font-size: clamp(28px, 4vw, 39px);
+
+    line-height: 1.18;
+
+    letter-spacing: -0.8px;
+
+    margin: 55px 0 18px;
+}
+
+.article h3 {
+    color: var(--navy);
+
+    font-size: 21px;
+
+    margin: 30px 0 10px;
+}
+
+.article p {
+    color: #536074;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+.article ul {
+    margin: 20px 0 30px 22px;
+}
+
+.article li {
+    margin-bottom: 10px;
+
+    color: #536074;
+}
+
+.article li::marker {
+    color: var(--gold);
+}
+
+.keyword {
+    color: var(--navy);
+    font-weight: 800;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.article-image {
+    position: relative;
+
+    margin: 35px 0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(6,20,45,0.15);
+}
+
+.article-image img {
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.article-image:hover img {
+    transform: scale(1.025);
+}
+
+.image-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 55px 22px 18px;
+
+    color: white;
+
+    font-size: 12px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.78)
+        );
+}
+
+
+/* =========================
+   BAH CARDS
+========================= */
+
+.bah-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.bah-card {
+    padding: 25px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fafc,
+            #eef2f7
+        );
+
+    border: 1px solid var(--border);
+
+    transition: .25s ease;
+}
+
+.bah-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(6,20,45,0.10);
+}
+
+.bah-number {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--navy);
+
+    color: var(--gold-light);
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+.bah-card h3 {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+}
+
+.bah-card p {
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   FEATURE BOX
+========================= */
+
+.feature-box {
+    position: relative;
+
+    margin: 45px 0;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+
+    box-shadow:
+        0 20px 50px rgba(6,20,45,0.16);
+}
+
+.feature-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border: 1px solid rgba(241,217,148,0.20);
+
+    border-radius: 50%;
+
+    right: -90px;
+    top: -110px;
+}
+
+.feature-box h2,
+.feature-box h3 {
+    color: var(--gold-light);
+
+    margin-top: 0;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.feature-box p {
+    color: rgba(255,255,255,0.76);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.feature-box a {
+    color: var(--gold-light);
+
+    font-weight: 900;
+
+    text-decoration: underline;
+
+    text-underline-offset: 4px;
+}
+
+
+/* =========================
+   TWO IMAGE SECTION
+========================= */
+
+.image-grid {
+    display: grid;
+
+    grid-template-columns: 1.35fr 1fr;
+
+    gap: 17px;
+
+    margin: 40px 0;
+}
+
+.image-grid figure {
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    background: #eef1f5;
+}
+
+.image-grid img {
+    width: 100%;
+
+    height: 310px;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.image-grid figure:hover img {
+    transform: scale(1.04);
+}
+
+.image-grid figcaption {
+    padding: 12px 15px;
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+/* =========================
+   CHECKLIST
+========================= */
+
+.checklist {
+    display: grid;
+
+    gap: 12px;
+
+    margin: 30px 0;
+}
+
+.check-item {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    background: #f7f9fb;
+
+    border: 1px solid var(--border);
+}
+
+.check-icon {
+    flex: 0 0 29px;
+
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    font-weight: 900;
+}
+
+.check-item strong {
+    color: var(--navy);
+}
+
+.check-item p {
+    margin: 5px 0 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-box {
+    margin: 40px 0;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: var(--cream);
+
+    border: 1px solid rgba(216,181,104,0.25);
+
+    color: var(--navy);
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    position: relative;
+}
+
+.quote-box::before {
+    content: "“";
+
+    position: absolute;
+
+    top: -25px;
+    left: 18px;
+
+    font-size: 75px;
+
+    color: var(--gold);
+
+    opacity: .45;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    margin-top: 50px;
+}
+
+.faq details {
+    border-bottom: 1px solid var(--border);
+
+    padding: 19px 0;
+}
+
+.faq summary {
+    list-style: none;
+
+    cursor: pointer;
+
+    position: relative;
+
+    padding-right: 30px;
+
+    color: var(--navy);
+
+    font-weight: 800;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+
+    position: absolute;
+
+    right: 0;
+
+    color: var(--gold);
+
+    font-size: 22px;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq details p {
+    padding-top: 12px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.cta {
+    width: min(1100px, 92%);
+
+    margin: 80px auto;
+
+    padding: 70px 45px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06142d,
+            #123a69
+        );
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(241,217,148,0.18);
+
+    top: -150px;
+    left: -100px;
+}
+
+.cta h2 {
+    position: relative;
+
+    font-size: clamp(30px, 5vw, 46px);
+
+    line-height: 1.15;
+
+    margin-bottom: 17px;
+
+    color: white;
+}
+
+.cta p {
+    position: relative;
+
+    max-width: 690px;
+
+    margin: auto auto 28px;
+
+    color: rgba(255,255,255,0.72);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #040d1d;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 13px;
+}
+
+footer strong {
+    color: var(--gold-light);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 950px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .toc {
+        display: none;
+    }
+
+    .bah-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media(max-width: 650px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+        border-bottom: 0;
+    }
+
+    .article {
+        padding: 25px 20px;
+
+        border-radius: 16px;
+    }
+
+    .article-image img {
+        height: 270px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid img {
+        height: 260px;
+    }
+
+    .feature-box {
+        padding: 28px 23px;
+    }
+
+    .cta {
+        padding: 50px 25px;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
 
-<!-- =========================
+<!-- =================================
      HERO
-========================= -->
+================================= -->
 
 <header class="hero">
 
     <div class="hero-content">
 
-        <div class="eyebrow">
+        <div class="hero-tag">
             <span></span>
             Military Housing Guide
         </div>
 
         <h1>
-            Understanding
-            <em>Military BAH</em>
-            & Housing
+            Military <span>BAH</span>:
+            A Complete Guide to Housing
         </h1>
 
-        <p class="hero-description">
-            A practical guide to Basic Allowance for Housing,
-            how BAH works, what affects your allowance,
-            and how military families can make smarter housing decisions.
+        <p class="hero-text">
+            Understand Basic Allowance for Housing, how BAH works,
+            what affects your allowance, and how military families
+            can make smarter housing decisions.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#guide" class="btn btn-primary">
-                Explore the Guide
+            <a href="#article" class="btn btn-primary">
+                Read the Guide
             </a>
 
             <a href="#faq" class="btn btn-outline">
-                Common Questions
+                BAH FAQs
             </a>
 
         </div>
@@ -706,27 +1029,44 @@
 </header>
 
 
-<!-- =========================
+<!-- =================================
      STATS
-========================= -->
+================================= -->
 
-<div class="stats-wrap">
+<div class="stats-wrapper">
 
     <div class="stats">
 
         <div class="stat">
+
             <strong>Military BAH</strong>
-            <span>Basic Allowance for Housing</span>
+
+            <span>
+                Basic Allowance for Housing
+            </span>
+
         </div>
 
+
         <div class="stat">
+
             <strong>Duty Location</strong>
-            <span>Local housing costs matter</span>
+
+            <span>
+                Local housing costs matter
+            </span>
+
         </div>
 
+
         <div class="stat">
+
             <strong>Family Status</strong>
-            <span>Dependency status can affect rates</span>
+
+            <span>
+                Dependency status can affect rates
+            </span>
+
         </div>
 
     </div>
@@ -734,11 +1074,11 @@
 </div>
 
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
+<!-- =================================
+     MAIN
+================================= -->
 
-<main class="page" id="guide">
+<main class="container" id="article">
 
 
     <!-- SIDEBAR -->
@@ -748,22 +1088,26 @@
         <nav class="toc">
 
             <div class="toc-title">
-                In This Guide
+                Explore This Guide
             </div>
+
+            <a href="#intro">
+                Introduction
+            </a>
 
             <a href="#what-is-bah">
                 What Is Military BAH?
             </a>
 
-            <a href="#how-bah-works">
+            <a href="#how-bah">
                 How Does BAH Work?
             </a>
 
-            <a href="#why-bah">
+            <a href="#importance">
                 Why BAH Matters
             </a>
 
-            <a href="#housing-research">
+            <a href="#research">
                 Housing Research
             </a>
 
@@ -771,16 +1115,24 @@
                 With vs. Without Dependents
             </a>
 
-            <a href="#tax-free">
+            <a href="#tax">
                 Is BAH Tax-Free?
             </a>
 
-            <a href="#off-base">
+            <a href="#covers">
+                What Does BAH Cover?
+            </a>
+
+            <a href="#offbase">
                 Living Off Base
             </a>
 
+            <a href="#rates">
+                How Rates Are Determined
+            </a>
+
             <a href="#tips">
-                BAH Planning Tips
+                Managing BAH
             </a>
 
             <a href="#faq">
@@ -794,15 +1146,61 @@
 
     <!-- ARTICLE -->
 
-    <article>
+    <article class="article">
 
-        <div class="article-intro">
 
-            Housing is one of the biggest financial considerations
-            for service members and their families. Understanding
-            <strong>Military BAH</strong> can help families create
-            a realistic housing budget and make better decisions
-            when moving to a new duty station.
+        <!-- INTRO -->
+
+        <section id="intro">
+
+            <div class="article-intro">
+
+                Housing is one of the most important financial
+                considerations for service members and their families.
+                Whether a military family is preparing for a Permanent
+                Change of Station (PCS), renting a home near an
+                installation, or considering buying a house,
+                understanding housing costs can make a significant
+                difference in monthly budgeting.
+
+            </div>
+
+            <p>
+                One of the most important housing benefits available
+                to eligible U.S. service members is
+                <strong class="keyword">Military BAH</strong>,
+                which stands for Basic Allowance for Housing.
+                This allowance is designed to help eligible service
+                members cover housing costs when government-provided
+                housing is not available or when they live in the
+                civilian community.
+            </p>
+
+            <p>
+                Because housing costs vary from one location to another,
+                Military BAH rates are not the same everywhere.
+                Understanding how BAH works can help service members
+                make better decisions about where to live and how much
+                to spend on housing.
+            </p>
+
+        </section>
+
+
+        <!-- HERO ARTICLE IMAGE -->
+
+        <div class="article-image">
+
+            <img
+                src="https://www.corvias.com/sites/default/files/2021-03/FortBragg.jpg"
+                alt="Military family housing home at Fort Bragg"
+                loading="lazy"
+            >
+
+            <div class="image-caption">
+                Military housing communities provide residential
+                options for service members and their families.
+            </div>
 
         </div>
 
@@ -811,119 +1209,131 @@
 
         <section id="what-is-bah">
 
-            <h2>What Is Military BAH?</h2>
+            <h2>
+                What Is Military BAH?
+            </h2>
 
             <p>
-                <strong class="keyword">Military BAH</strong>, or
-                Basic Allowance for Housing, is a housing allowance
-                provided to eligible members of the U.S. military
-                who are not provided government housing.
+                <strong class="keyword">Military BAH</strong>,
+                or Basic Allowance for Housing, is a housing allowance
+                provided to eligible members of the U.S. military who
+                are not provided government housing.
             </p>
 
             <p>
                 The purpose of BAH is to help offset housing expenses
-                in the local civilian market. Instead of receiving
-                the same housing allowance regardless of location,
-                service members receive an amount based on several
-                factors, including duty location, pay grade and
+                in the local civilian market. Instead of receiving the
+                same housing allowance regardless of location, service
+                members receive an amount based on several factors,
+                including their duty location, pay grade, and
                 dependency status.
             </p>
 
             <p>
-                Housing costs can vary significantly between military
-                locations. A service member assigned to a high-cost
-                metropolitan area may therefore receive a different
-                BAH amount than someone stationed in a lower-cost
-                community.
+                For example, housing costs in a major metropolitan area
+                may be considerably higher than those in a smaller
+                community. As a result, BAH rates can differ
+                significantly between military locations.
+            </p>
+
+            <p>
+                BAH is also generally considered a tax-free allowance,
+                which makes it an important part of the overall
+                compensation package for eligible service members.
             </p>
 
         </section>
-
-
-        <!-- IMAGE -->
-
-        <div class="article-image">
-
-            <img
-                src="https://www.hanscomfamilyhousing.com/sites/default/files/styles/large/public/2020-07/Hanscom%20Family%20Housing.jpg"
-                alt="Military family housing community"
-                loading="lazy"
-            >
-
-            <div class="image-caption">
-                Military family housing is designed around the needs
-                of service members and their families.
-            </div>
-
-        </div>
 
 
         <!-- HOW BAH WORKS -->
 
-        <section id="how-bah-works">
+        <section id="how-bah">
 
-            <h2>How Does Military BAH Work?</h2>
+            <h2>
+                How Does Military BAH Work?
+            </h2>
 
             <p>
-                The amount of Military BAH a service member receives
-                is primarily influenced by several important factors.
-                Understanding these factors is essential when creating
-                a housing budget.
+                The amount of <strong>Military BAH</strong> a service
+                member receives is primarily influenced by three major
+                factors:
             </p>
 
-            <div class="info-grid">
 
-                <div class="info-card">
+            <div class="bah-grid">
 
-                    <div class="number">01</div>
+                <div class="bah-card">
 
-                    <h3>Duty Location</h3>
+                    <div class="bah-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Duty Location
+                    </h3>
 
                     <p>
-                        Local housing costs play an important role
-                        in determining BAH rates.
+                        Local housing costs are a major factor in
+                        determining applicable BAH rates.
                     </p>
 
                 </div>
 
 
-                <div class="info-card">
+                <div class="bah-card">
 
-                    <div class="number">02</div>
+                    <div class="bah-number">
+                        02
+                    </div>
 
-                    <h3>Pay Grade</h3>
+                    <h3>
+                        Pay Grade
+                    </h3>
 
                     <p>
-                        BAH rates can differ according to the
-                        service member's pay grade.
+                        BAH rates can vary depending on the service
+                        member's pay grade.
                     </p>
 
                 </div>
 
 
-                <div class="info-card">
+                <div class="bah-card">
 
-                    <div class="number">03</div>
+                    <div class="bah-number">
+                        03
+                    </div>
 
-                    <h3>Dependency Status</h3>
+                    <h3>
+                        Dependency Status
+                    </h3>
 
                     <p>
-                        Eligible members with dependents can receive
-                        a different rate than those without dependents.
+                        Eligible members with dependents generally
+                        receive a different rate than those without.
                     </p>
 
                 </div>
 
             </div>
 
+            <p>
+                Military Housing Areas, or MHAs, are used to determine
+                housing costs for different locations. These factors
+                work together to determine the allowance available to
+                a particular service member.
+            </p>
+
         </section>
 
 
-        <!-- WHY BAH MATTERS -->
+        <!-- IMPORTANCE -->
 
-        <section id="why-bah">
+        <section id="importance">
 
-            <h2>Why Understanding Military BAH Is Important</h2>
+            <h2>
+                Why Understanding Military BAH Is Important
+            </h2>
 
             <p>
                 Knowing your BAH rate can help you create a realistic
@@ -932,73 +1342,110 @@
             </p>
 
             <p>
-                Actual housing expenses can vary depending on the
-                neighborhood, property size, commute, utilities,
-                insurance and other household costs.
+                A family may receive a specific monthly BAH amount,
+                but actual housing expenses can vary considerably
+                depending on the neighborhood, size of the property,
+                commute, utilities, and other household costs.
             </p>
 
             <p>
-                This becomes particularly important during a PCS move,
-                when housing costs can change significantly from one
-                duty station to another.
+                For this reason, military families should research the
+                local housing market before making a housing decision.
+                Comparing available properties with the applicable BAH
+                rate can provide a much clearer picture of what is
+                affordable.
+            </p>
+
+            <p>
+                This is especially important during a PCS move because
+                housing costs can change significantly when moving from
+                one duty station to another.
             </p>
 
         </section>
 
 
-        <!-- FEATURE / CONTEXTUAL LINK -->
+        <!-- CONTEXTUAL LINK SECTION -->
 
-        <div class="feature-box" id="housing-research">
+        <div class="feature-box" id="research">
 
             <h3>
-                Research Your Housing Options
+                Military Housing Research and BAH
             </h3>
 
             <p>
                 Understanding BAH is only one part of making a smart
-                military housing decision. Service members and families
-                should also research rental prices, neighborhoods,
-                commuting distances, schools and available housing
-                options around their duty station.
+                military housing decision. Service members and military
+                families should also research rental prices,
+                neighborhoods, commuting distances, schools, amenities,
+                and available housing options around their duty station.
             </p>
 
             <p>
-                For families preparing for a PCS move,
-                <a href="https://milhousingnetwork.com/what-is-the-military-housing-allowance-bah/"
-                   target="_blank"
-                   rel="noopener">
+                For families preparing for a PCS move, reliable housing
+                information can make the transition much easier.
+                <a
+                    href="https://milhousingnetwork.com/what-is-the-military-housing-allowance-bah/"
+                    target="_blank"
+                    rel="noopener"
+                >
                     MilHousing Network
                 </a>
                 provides military housing resources that can help
-                families explore housing-related information and
-                better understand their options when moving to a new
-                duty station.
+                families explore housing-related information and better
+                understand their options when moving to a new duty station.
+            </p>
+
+            <p>
+                This type of research can be particularly useful when
+                comparing <strong>Military BAH</strong> with actual
+                housing costs in a specific area. Rather than looking at
+                the allowance alone, families can consider how far their
+                housing budget may go and which neighborhoods or housing
+                options best fit their needs.
             </p>
 
             <p>
                 Combining current BAH information with local housing
-                research can give service members a clearer picture
-                of how far their housing budget may go.
+                research allows service members to make more informed
+                decisions before signing a lease or purchasing a home.
             </p>
 
         </div>
 
 
-        <!-- SECOND IMAGE -->
+        <!-- IMAGE GRID -->
 
         <div class="image-grid">
 
-            <img
-                src="https://www.corvias.com/sites/default/files/2023-05/Meade%20Meuse%20Forest%20SNCO%20ADA%204%20bed_0.jpg"
-                alt="Military housing at Fort Meade"
-                loading="lazy"
-            >
+            <figure>
 
-            <img
-                src="https://www.scottfamilyhousing.com/sites/scott/images/take-a-look-floorplans.jpg"
-                alt="Suburban military family housing"
-                loading="lazy"
-            >
+                <img
+                    src="https://www.corvias.com/sites/default/files/styles/640_square/public/2023-01/Military_2.jpg?h=242cd5c8&itok=ngL9Zjb6"
+                    alt="Military family receiving keys to a new home"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    A military family receiving keys to a new home.
+                </figcaption>
+
+            </figure>
+
+
+            <figure>
+
+                <img
+                    src="https://images.squarespace-cdn.com/content/v1/5f7b95566aaf923f41d624d0/1615414057896-EWZY8U7O1O71CE7UNOJZ/Natural%2BLighting%2B-%2BParks%2Bat%2BMonterey"
+                    alt="Military family enjoying time together at home"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Family life is an important part of military housing decisions.
+                </figcaption>
+
+            </figure>
 
         </div>
 
@@ -1007,11 +1454,13 @@
 
         <section id="dependents">
 
-            <h2>Military BAH With Dependents vs. Without Dependents</h2>
+            <h2>
+                Military BAH With Dependents vs. Without Dependents
+            </h2>
 
             <p>
-                One important distinction in the BAH system is whether
-                a service member has qualifying dependents.
+                One of the important distinctions in the BAH system is
+                whether a service member has qualifying dependents.
             </p>
 
             <p>
@@ -1022,10 +1471,20 @@
             </p>
 
             <p>
-                This distinction recognizes that housing requirements
-                can vary depending on a service member's family situation.
-                A family with children may need a larger home, while a
-                single service member may have different housing needs.
+                The difference recognizes that housing requirements can
+                vary depending on a service member's family situation.
+            </p>
+
+            <p>
+                For example, a military family with children may need a
+                larger home with additional bedrooms, while a single
+                service member may have different housing requirements.
+            </p>
+
+            <p>
+                Understanding dependency status is therefore essential
+                when estimating the amount of housing allowance
+                available to a household.
             </p>
 
         </section>
@@ -1033,9 +1492,11 @@
 
         <!-- TAX -->
 
-        <section id="tax-free">
+        <section id="tax">
 
-            <h2>Is Military BAH Tax-Free?</h2>
+            <h2>
+                Is Military BAH Tax-Free?
+            </h2>
 
             <p>
                 One of the major benefits associated with
@@ -1044,17 +1505,68 @@
             </p>
 
             <p>
-                This makes BAH an important part of the overall
-                compensation package for eligible service members.
-                The allowance can be used toward housing expenses
-                without the same federal income-tax treatment that
-                applies to taxable income.
+                This means eligible service members typically do not
+                pay federal income tax on their BAH. As a result, the
+                full allowance can be used toward housing-related
+                expenses without the same federal income-tax treatment
+                that applies to regular taxable income.
+            </p>
+
+            <div class="quote-box">
+
+                The tax-free nature of BAH makes it an important
+                component of military compensation and household
+                financial planning.
+
+            </div>
+
+            <p>
+                However, service members should remember that BAH is
+                intended to help with housing costs and should be
+                considered alongside other expenses such as utilities,
+                transportation, insurance, maintenance, and household
+                necessities.
+            </p>
+
+        </section>
+
+
+        <!-- WHAT BAH COVERS -->
+
+        <section id="covers">
+
+            <h2>
+                What Does Military BAH Cover?
+            </h2>
+
+            <p>
+                Military BAH is intended to help offset the cost of
+                housing in the civilian community. It is not simply a
+                reimbursement for the exact rent paid by a service member.
             </p>
 
             <p>
-                Service members should still consider their complete
-                financial situation, including utilities, transportation,
-                insurance, maintenance and other household expenses.
+                A service member may choose a property that costs less
+                than the available BAH amount or one that costs more.
+                The difference will depend on the individual's housing
+                choice and overall financial situation.
+            </p>
+
+            <p>
+                For example, choosing a property below the available
+                BAH amount may allow a family to allocate more of its
+                monthly budget toward savings or other expenses.
+            </p>
+
+            <p>
+                On the other hand, selecting a more expensive property
+                may require the family to pay the difference out of
+                pocket.
+            </p>
+
+            <p>
+                This is why comparing different housing options is an
+                important part of making the most of the allowance.
             </p>
 
         </section>
@@ -1062,26 +1574,90 @@
 
         <!-- OFF BASE -->
 
-        <section id="off-base">
+        <section id="offbase">
 
-            <h2>Can You Receive BAH While Living Off Base?</h2>
+            <h2>
+                Can You Receive BAH While Living Off Base?
+            </h2>
 
             <p>
-                Eligible service members can generally receive BAH
-                when they live off base instead of using government-
-                provided housing.
+                Eligible service members can generally receive BAH when
+                they live off base instead of using government-provided
+                housing.
             </p>
 
             <p>
-                Living off base can provide families with more flexibility
-                when choosing a neighborhood, home size, schools,
-                commute and local amenities.
+                Living off base can give military families more
+                flexibility. They can choose a neighborhood based on
+                factors such as schools, commute time, shopping,
+                recreational opportunities, and proximity to the
+                military installation.
             </p>
 
             <p>
-                However, greater flexibility also means families need
-                to carefully compare housing prices and other expenses
-                before making a decision.
+                However, greater choice also means greater responsibility.
+                Families need to compare housing prices and other
+                expenses before deciding where to live.
+            </p>
+
+            <p>
+                A home that appears affordable based on rent alone may
+                become more expensive when commuting costs, utilities,
+                insurance, and other expenses are included.
+            </p>
+
+        </section>
+
+
+        <!-- PCS IMAGE -->
+
+        <div class="article-image">
+
+            <img
+                src="https://www.usamm.com/cdn/shop/articles/PCS_Military_Moving.jpg"
+                alt="Military family preparing for a PCS move"
+                loading="lazy"
+            >
+
+            <div class="image-caption">
+                PCS moves can make housing research and budgeting
+                especially important for military families.
+            </div>
+
+        </div>
+
+
+        <!-- RATES -->
+
+        <section id="rates">
+
+            <h2>
+                How Are Military BAH Rates Determined?
+            </h2>
+
+            <p>
+                BAH rates are determined using housing market information
+                for different areas. Local rental housing costs and
+                other market factors are considered when establishing
+                rates.
+            </p>
+
+            <p>
+                Because housing markets change, BAH rates can also
+                change over time. A rate that applied to a particular
+                duty station in a previous year may not be the same in
+                the current year.
+            </p>
+
+            <p>
+                For this reason, service members should always verify
+                the current BAH information applicable to their situation
+                instead of relying on outdated figures.
+            </p>
+
+            <p>
+                This is especially important when planning a PCS move
+                or creating a long-term household budget.
             </p>
 
         </section>
@@ -1091,84 +1667,141 @@
 
         <section id="tips">
 
-            <h2>Tips for Managing Military BAH</h2>
+            <h2>
+                Tips for Managing Military BAH
+            </h2>
+
 
             <div class="checklist">
 
-                <div class="check">
 
-                    <div class="check-icon">✓</div>
+                <div class="check-item">
+
+                    <div class="check-icon">
+                        ✓
+                    </div>
 
                     <div>
-                        <strong>Research the Current BAH Rate</strong>
+
+                        <strong>
+                            Research the Current BAH Rate
+                        </strong>
 
                         <p>
-                            Check the current information applicable
-                            to your duty location, pay grade and
+                            Start by checking the current rate applicable
+                            to your duty location, pay grade, and
                             dependency status.
                         </p>
+
                     </div>
 
                 </div>
 
 
-                <div class="check">
+                <div class="check-item">
 
-                    <div class="check-icon">✓</div>
+                    <div class="check-icon">
+                        ✓
+                    </div>
 
                     <div>
-                        <strong>Compare Multiple Neighborhoods</strong>
+
+                        <strong>
+                            Compare Multiple Neighborhoods
+                        </strong>
 
                         <p>
-                            Look beyond rent and compare commute,
-                            schools, amenities and overall living costs.
+                            Compare different areas based on rent,
+                            commute time, schools, amenities, and
+                            overall living costs.
                         </p>
+
                     </div>
 
                 </div>
 
 
-                <div class="check">
+                <div class="check-item">
 
-                    <div class="check-icon">✓</div>
+                    <div class="check-icon">
+                        ✓
+                    </div>
 
                     <div>
-                        <strong>Consider More Than Rent</strong>
+
+                        <strong>
+                            Consider More Than Rent
+                        </strong>
 
                         <p>
-                            Include utilities, insurance, transportation,
-                            maintenance and other recurring costs.
+                            Utilities, insurance, maintenance,
+                            transportation, and other expenses should
+                            also be considered.
                         </p>
+
                     </div>
 
                 </div>
 
 
-                <div class="check">
+                <div class="check-item">
 
-                    <div class="check-icon">✓</div>
+                    <div class="check-icon">
+                        ✓
+                    </div>
 
                     <div>
-                        <strong>Plan Before a PCS Move</strong>
+
+                        <strong>
+                            Avoid Spending the Entire Allowance Automatically
+                        </strong>
 
                         <p>
-                            Research the housing market before moving
-                            so your family can make a more confident decision.
+                            If a suitable property costs less than the
+                            allowance, the remaining budget may provide
+                            additional financial flexibility.
                         </p>
+
                     </div>
 
                 </div>
+
+
+                <div class="check-item">
+
+                    <div class="check-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Research Before a PCS Move
+                        </strong>
+
+                        <p>
+                            Researching the local housing market before
+                            moving can help reduce surprises and make
+                            the transition smoother.
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- FINAL -->
+        <!-- FINAL THOUGHTS -->
 
         <section>
 
-            <h2>Final Thoughts on Military BAH</h2>
+            <h2>
+                Final Thoughts
+            </h2>
 
             <p>
                 <strong>Military BAH</strong> is an important housing
@@ -1180,18 +1813,27 @@
 
             <p>
                 The amount available depends on factors such as duty
-                location, pay grade and dependency status. Because
+                location, pay grade, and dependency status. Since
                 housing markets and BAH rates can change, service
-                members should use current information when planning
-                their housing budget.
+                members should always use current information when
+                planning their housing budget.
             </p>
 
             <p>
                 Most importantly, BAH should be viewed as part of a
-                broader housing strategy. By comparing local housing
-                options, considering additional living expenses and
-                researching communities around a duty station,
-                military families can make more informed decisions.
+                broader housing strategy rather than simply a monthly
+                amount to spend. By comparing local housing options,
+                considering additional living expenses, and researching
+                communities around their duty station, military families
+                can make more informed housing decisions.
+            </p>
+
+            <p>
+                With the right planning, understanding
+                <strong>Military BAH</strong> can help service members
+                manage housing expenses, prepare for PCS relocations,
+                and choose a home that fits both their family's needs
+                and their overall financial goals.
             </p>
 
         </section>
@@ -1201,7 +1843,9 @@
 
         <section class="faq" id="faq">
 
-            <h2>Frequently Asked Questions</h2>
+            <h2>
+                Frequently Asked Questions
+            </h2>
 
 
             <details>
@@ -1211,9 +1855,9 @@
                 </summary>
 
                 <p>
-                    BAH stands for Basic Allowance for Housing.
-                    It is a housing allowance available to eligible
-                    service members under qualifying circumstances.
+                    BAH stands for Basic Allowance for Housing. It is a
+                    housing allowance available to eligible service
+                    members under qualifying circumstances.
                 </p>
 
             </details>
@@ -1226,8 +1870,8 @@
                 </summary>
 
                 <p>
-                    BAH is influenced by factors such as duty location,
-                    pay grade and dependency status.
+                    Military BAH is influenced by factors such as duty
+                    location, pay grade, and dependency status.
                 </p>
 
             </details>
@@ -1240,9 +1884,9 @@
                 </summary>
 
                 <p>
-                    Eligible service members may have the option to
-                    live off base and use their housing allowance
-                    toward housing expenses.
+                    Eligible service members may have the option to live
+                    off base and use their housing allowance toward
+                    housing expenses.
                 </p>
 
             </details>
@@ -1262,49 +1906,53 @@
 
             </details>
 
+
         </section>
+
 
     </article>
 
 </main>
 
 
-<!-- =========================
+<!-- =================================
      CTA
-========================= -->
+================================= -->
 
 <section class="cta">
 
     <h2>
-        Make Your Military Housing Decision With Confidence
+        Make Smarter Military Housing Decisions
     </h2>
 
     <p>
         Understanding Military BAH is the first step.
-        Comparing housing options, local costs and community
-        resources can help you make a smarter decision for
-        your next duty station.
+        Comparing housing options, local costs, and community
+        resources can help you make a more confident decision
+        for your next duty station.
     </p>
 
     <a
         href="https://milhousingnetwork.com/"
         target="_blank"
         rel="noopener"
-        class="btn btn-primary">
+        class="btn btn-primary"
+    >
         Explore Military Housing
     </a>
 
 </section>
 
 
-<!-- =========================
+<!-- =================================
      FOOTER
-========================= -->
+================================= -->
 
 <footer>
 
     <p>
-        © 2026 <strong>Military Housing Guide</strong>.
+        © 2026
+        <strong>Military Housing Guide</strong>.
         Information for service members and military families.
     </p>
 
